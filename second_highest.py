@@ -112,3 +112,14 @@ result = second_highest_occurrence(numbers)
 print("Second highest occurrence number:", result)
 
 
+def second_highest_occurence(numbers):
+
+    count_dict = {}
+
+    for num in numbers:
+        count_dict[num] = count_dict.get(num, 0) + 1
+
+    max_occurrence = max(count_dict.values())
+
+
+
