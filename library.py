@@ -15,7 +15,6 @@ class Library:
         for book_id, book_info in self.books.items():
             print(f"ID: {book_id}, Title: {book_info['title']}, Author: {book_info['author']}, Available: {book_info['available']}")
 
-
     def borrow_book(self, book_id):
         if book_id in self.books:
             if self.books[book_id]['available']:

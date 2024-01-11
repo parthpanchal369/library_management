@@ -91,12 +91,12 @@ if __name__ == "__main__":
     main()
 
 
-# def print_database(self):
-#     cursor = self.conn.cursor()
-#     cursor.execute('SELECT * FROM tasks')
-#     tasks = cursor.fetchall()
-#
-#     print("Data in the database:")
-#     for task in tasks:
-#         print(task)
+def print_database(self):
+    cursor = self.conn.cursor()
+    cursor.execute('SELECT * FROM tasks')
+    tasks = cursor.fetchall()
+
+    print("Data in the database:")
+    for task in tasks:
+        print(task)
 
