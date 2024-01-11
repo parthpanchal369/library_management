@@ -1,0 +1,1 @@
+n = int(input("Enter your number for print stars: "))
