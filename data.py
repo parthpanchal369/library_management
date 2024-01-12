@@ -55,9 +55,20 @@
 #
 #
 # print(new_list)
+#
+# import requests
+# response = requests.get("https://api.thecatapi.com/")
+# print(response.text)
+# # '{"message":"The Cat API","version":"1.2.5"}'
 
-import requests
-response = requests.get("https://api.thecatapi.com/")
-print(response.text)
-# '{"message":"The Cat API","version":"1.2.5"}'
 
+
+# a = "parth"
+# b = "panchal"
+# print(id(a))
+# print(id(b))
+# a,b = b,a
+# print(a)
+# print(b)
+# print(id(a))
+# print(id(b))
