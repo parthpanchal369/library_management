@@ -5,16 +5,6 @@ for i in range(0, n):
         print(end=" ")
     k = k - 1
     for j in range(0,i+1):
-        print("*", end=" ")
+        print("*" if i == 1 or i == n-1 or j == 0 or j == n-1 or i == j else " ", end=" ")
 
     print()
-
-
-
-
-
-
-
-
-
-

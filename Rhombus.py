@@ -1,10 +1,9 @@
 
-rows = int(input("Enter your number for print stars: "))
+n = int(input("Enter your number for print stars: "))
 
-for i in range(rows):
-
-    print(" " * (i), end=" ")
-    for j in range(rows):
+for i in range(n):
+    print(" " * i, end="")
+    for j in range(n):
         print("*", end=" ")
 
     print()
