@@ -88,38 +88,62 @@
 # print("Second highest occurrence number:", result)
 
 
-def second_highest_occurrence(numbers):
-    count_dict = {}
+# def second_highest_occurrence(numbers):
+#     count_dict = {}
+#
+#     for num in numbers:
+#         count_dict[num] = count_dict.get(num, 0) + 1
+#
+#     max_occurrence = max(count_dict.values())
+#
+#
+#     filtered_numbers = [num for num, count in count_dict.items() if count != max_occurrence]
+#
+#     if filtered_numbers:
+#         second_max_occurrence = max([count_dict[num] for num in filtered_numbers])
+#         second_highest_occurrence = next(num for num, count in count_dict.items() if count == second_max_occurrence)
+#         return second_highest_occurrence
+#
+#     return None
+#
+#
+# numbers = (1,2,2,3,3,33,4,4,4,4)
+# result = second_highest_occurrence(numbers)
+# print("Second highest occurrence number:", result)
 
-    for num in numbers:
-        count_dict[num] = count_dict.get(num, 0) + 1
 
-    max_occurrence = max(count_dict.values())
-
-
-    filtered_numbers = [num for num, count in count_dict.items() if count != max_occurrence]
-
-    if filtered_numbers:
-        second_max_occurrence = max([count_dict[num] for num in filtered_numbers])
-        second_highest_occurrence = next(num for num, count in count_dict.items() if count == second_max_occurrence)
-        return second_highest_occurrence
-
-    return None
-
-
-numbers = (1,2,2,3,3,33,4,4,4,4,3,3,2,2,3,4,3)
-result = second_highest_occurrence(numbers)
-print("Second highest occurrence number:", result)
+# def second_highest_occurence(numbers):
+#
+#     count_dict = {}
+#
+#     for num in numbers:
+#         count_dict[num] = count_dict.get(num, 0) + 1
+#
+#     max_occurrence = max(count_dict.values())
 
 
 def second_highest_occurence(numbers):
 
-    count_dict = {}
+    count_occurence = {}
 
     for num in numbers:
-        count_dict[num] = count_dict.get(num, 0) + 1
+        if num in count_occurence:
+            count_occurence[num] += 1
 
-    max_occurrence = max(count_dict.values())
+        else:
+            count_occurence[num] = 1
+
+    max_occurence = max(count_occurence.values())
+
+    sorting_occurence = sorted(set(count_occurence.values()))
+    second_higest_sorting = sorting_occurence[-2]
+    return second_higest_sorting
+
+result = second_highest_occurence(numbers)
+if result:
+    print(f"Your second higest occurence number is {result}")
+
+
 
 
 
