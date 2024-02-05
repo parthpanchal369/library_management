@@ -122,28 +122,24 @@
 #     max_occurrence = max(count_dict.values())
 
 
-def second_highest_occurence(numbers):
+def generate_pattern(rows):
+    current_number = 1
 
-    count_occurence = {}
+    for i in range(1, rows + 1):
+        count = i
+        row_values = []
 
-    for num in numbers:
-        if num in count_occurence:
-            count_occurence[num] += 1
+        for j in range(1, i + 1):
+            if j % 2 != 0:
+                row_values.append(str(current_number))
+                current_number += 1
+            else:
+                row_values.append(str(current_number + count))
+                current_number += 1
+                count += 2
 
-        else:
-            count_occurence[num] = 1
+        row_str = ' '.join(row_values)
+        print(row_str)
 
-    max_occurence = max(count_occurence.values())
-
-    sorting_occurence = sorted(set(count_occurence.values()))
-    second_higest_sorting = sorting_occurence[-2]
-    return second_higest_sorting
-
-result = second_highest_occurence(numbers)
-if result:
-    print(f"Your second higest occurence number is {result}")
-
-
-
-
-
+# Adjust the number of rows as needed
+generate_pattern(5)
